@@ -1,0 +1,52 @@
+//NewMember db
+create database gym;
+
+create table NewMember
+(
+MID int not null IDENTITY (1,1) primary key,
+Fname varchar(150) Not null,
+Lname varchar(150) Not null,
+Gender varchar(20) Not null,
+Dob varchar(100) Not null,
+Mobile bigint not null,
+Email varchar(150),
+JoinDate varchar(100) Not null,
+GymTime varchar(120) Not null,
+Maddress varchar(250) Not null,
+MembershipTime varchar(120) Not null
+);
+
+select * from NewMember
+//fname, lname, gender, dob, mobile, email, joindate, gymtime, maddress, membership time
+
+
+
+//NewStaff db
+create table NewStaff
+(
+SID int not null IDENTITY(1,1) primary key,
+Fname varchar(150) Not null,
+Lname varchar(150) Not null,
+Gender varchar(20) Not null,
+Dob varchar(100) Not null,
+Mobile bigint not null,
+Email varchar(150),
+JoinDate varchar(100) Not null,
+State varchar(100) Not null,
+City varchar(100) Not null
+);
+
+select * from NewStaff
+
+//equipment db
+create table Equipment
+(
+EID int not null IDENTITY(1,1) primary key,
+EquipName varchar(250) not null,
+EDescription varchar(450) not null,
+MUsed varchar(250) not null,
+DDate varchar(150) not null,
+Cost bigint not null
+);
+
+select * from Equipment
